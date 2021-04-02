@@ -1,11 +1,44 @@
 .App {
-  text-align: center;
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.AppHeader {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.Main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.MainSection {
+  position: relative;
+}
+
+.MainSection img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.MainSection p {
+  position: relative;
+  background-color: black;
+  z-index: 2;
+  bottom: -100px;
+}
+
+.Button {
+  border: 0px;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  border-radius: 3px;
 }
