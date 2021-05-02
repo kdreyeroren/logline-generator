@@ -1,38 +1,27 @@
 .App {
   background-color: #282c34;
   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .AppHeader {
-  max-width: 960px;
   margin: 0 auto;
   background-color: rgba(255, 0, 0, 0.5);
   padding: 60px;
   margin-bottom: 60px;
 }
 
-.Main {
+.AppHeaderContent {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.MainSection {
-  position: relative;
-}
 
-.MainSection img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.MainSection p {
-  position: relative;
-  background-color: black;
-  z-index: 2;
-  bottom: -100px;
+.Main {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .Button {
@@ -41,4 +30,33 @@
   color: white;
   padding: 15px;
   border-radius: 3px;
+  align-self: center;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+.Image {
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.Logline {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.AppFooter {
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 30px;
+  text-align: center;
 }

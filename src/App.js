@@ -19,23 +19,32 @@ function App() {
     })
   }
 
+
   return (
     <div className="App">
+      <video id="v"/>
+      <canvas id="canvas" width="480" height="320" />
       <header className="AppHeader">
-        <h1>Logline Generator</h1>
-        <h2>Always wanted to make a log line? Click this button and our magical generator will do the heavy lifting for you.</h2>
+        <div className="AppHeaderContent">
+          <h1>Logline Generator</h1>
+          <p>Always wanted to make a log line? Click this button and our magical generator will do the heavy lifting for you.</p>
+        </div>
       </header>
       <main className="Main">
         <button className="Button" onClick={handleButtonClick}>
           Generate!
         </button>
         <section className="MainSection">
-          <p>
-            {logLine}
-          </p>
-          <img src={imageUrl} />
+          <div className="Image" style={backgroundImage}>
+            <p className="Logline">
+              {logLine}
+            </p>
+          </div>
         </section>
       </main>
+      <footer class="AppFooter">
+        Made by Katya & Samus across the globe
+      </footer>
     </div>
   )
 }
