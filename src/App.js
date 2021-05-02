@@ -19,6 +19,26 @@ function App() {
     })
   }
 
+  function handleDownloadClick() {
+    console.log("handleDownloadClick")
+    var foo = navigator.mediaDevices.getDisplayMedia({video: true})
+    foo.then((stream) => {
+      console.log("user media permissions accepted")
+      const video = document.getElementById("v")
+      const canvas = document.getElementById("canvas")
+      console.log(video, canvas)
+
+      video.srcObject = stream
+      const ctx = canvas.getContext("2d")
+      ctx.drawImage(video, 0, 0)
+      const img = canvas.toDataURL("image/png")
+      alert("done")
+    })
+  }
+
+  const backgroundImage = {
+    backgroundImage: `url(${imageUrl})`
+  }
 
   return (
     <div className="App">
@@ -40,6 +60,9 @@ function App() {
               {logLine}
             </p>
           </div>
+          <button className="Button" onClick={handleDownloadClick}>
+            Download your meme!
+          </button>
         </section>
       </main>
       <footer class="AppFooter">
